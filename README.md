@@ -2,6 +2,10 @@
 
 A production-level, high-performance scientific calculator built with a modern tech stack. Designed for the AI/ML developer portfolio, this application combines a sleek macOS-inspired UI with a secure, asynchronous Python backend.
 
+## 📸 Screenshots
+
+![Calculator UI](screenshots/home.png)
+
 
 ## 🚀 Key Features
 
