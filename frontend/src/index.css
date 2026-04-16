@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0f172a] text-gray-100 transition-colors duration-300;
+  }
+}
+
+.calculator-body {
+  @apply relative p-8 rounded-[50px] bg-[#1e293b] border-8 border-[#334155] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5),inset_0_2px_4px_rgba(255,255,255,0.1)];
+}
+
+.lcd-display {
+  @apply relative mb-8 p-6 rounded-3xl bg-[#020617] border-2 border-[#1e293b] shadow-[inset_0_4px_12px_rgba(0,0,0,0.6)];
+}
+
+.lcd-content {
+  font-family: 'JetBrains Mono', monospace;
+  @apply text-[#38bdf8] drop-shadow-[0_0_8px_rgba(56,189,248,0.3)];
+}
+
+.calculator-button {
+  @apply relative flex items-center justify-center text-lg font-semibold rounded-2xl transition-all duration-150 active:translate-y-1 select-none overflow-hidden;
+}
+
+/* Realistic Button Depth */
+.btn-realistic {
+  @apply shadow-[0_6px_0_0_rgba(0,0,0,0.2),0_8px_15px_-5px_rgba(0,0,0,0.4)];
+}
+
+.btn-realistic:active {
+  @apply shadow-[0_2px_0_0_rgba(0,0,0,0.2),0_4px_8px_-2px_rgba(0,0,0,0.4)];
+}
+
+.btn-num {
+  @apply bg-[#334155] text-white hover:bg-[#475569] border-t border-white/10;
+}
+
+.btn-sci {
+  @apply bg-[#1e293b] text-[#94a3b8] hover:text-white hover:bg-[#334155] text-sm;
+}
+
+.btn-op {
+  @apply bg-[#f59e0b] text-[#451a03] hover:bg-[#fbbf24] font-black;
+}
+
+.btn-misc {
+  @apply bg-[#ef4444] text-white hover:bg-[#f87171];
+}
+
+.btn-eq {
+  @apply bg-[#38bdf8] text-[#082f49] hover:bg-[#7dd3fc] shadow-[0_6px_0_0_#075985];
+}
+
+.btn-eq:active {
+  @apply shadow-[0_2px_0_0_#075985];
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.3);
+  border-radius: 10px;
+}
+
